@@ -16,28 +16,28 @@ namespace Demo_EFCore_SQLite.Controllers
 
             publisherDbContext.Database.EnsureCreated();
 
-            var authors = new List<Author>
-                {
-                    new Author
-                    {
-                        Id = 1,
-                        Name ="Carson",
-                    },
-                                        new Author
-                    {
-                        Id = 2,
-                        Name ="Jose",
-                        Books = new List<Book>()
-                        {
-                            new Book { Title = "Introduction to Machine Learning"},
-                            new Book { Title = "Advanced Topics on Machine Learning"},
-                            new Book { Title = "Introduction to Computing"}
-                        }
-                    }
-                };
+            //var authors = new List<Author>
+            //    {
+            //        new Author
+            //        {
+            //            Id = 1,
+            //            Name ="Carson",
+            //        },
+            //                            new Author
+            //        {
+            //            Id = 2,
+            //            Name ="Jose",
+            //            Books = new List<Book>()
+            //            {
+            //                new Book { Title = "Introduction to Machine Learning"},
+            //                new Book { Title = "Advanced Topics on Machine Learning"},
+            //                new Book { Title = "Introduction to Computing"}
+            //            }
+            //        }
+            //    };
 
-            publisherDbContext.Authors.AddRange(authors);
-            publisherDbContext.SaveChanges();
+            //publisherDbContext.Authors.AddRange(authors);
+            //publisherDbContext.SaveChanges();
         }
 
         public IActionResult Index()
